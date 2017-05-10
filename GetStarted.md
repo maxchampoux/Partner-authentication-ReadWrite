@@ -27,7 +27,7 @@ X-WSSE: UsernameToken
 Place have a look to our API documentation : http://api.ibanfirst.com/APIDocumentation/IbanfirstAPI/Security/
 You can find examples of code for computing the password digest and the whole X-WSSE header.
 
-</br>
+<hr />
 
 ## Route ##
 
