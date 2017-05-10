@@ -1,0 +1,62 @@
+# PARTNER AUTHENTICATION SERVICE #  
+
+## Route ##
+
+| Route | Description |
+|-------|-------------|
+| [`GET /APIHelpers/Auth/WithToken/{token}/`](#get_userAuthenticationData) | Get user authentication data from user token |
+
+## Details ##
+
+### <a id="get_userAuthenticationData"></a> Get user authentication data from user token ###
+
+With the token provided to you by the user, you can gather all information you need to authenticate the user against the API.
+This request allows you to get authentication data to execute requests on the API on behalf of an IbanFirst User.
+
+```
+Method: 	GET
+URL: 		/APIHelpers/Auth/WithToken/{token}/
+```
+
+**Parameters:**
+
+| Field | In | Type | Required | Description |
+|-------|--|------|----------|-------------|
+| token | Route | String(16) | Required | The token of the user you want to authenticate |
+
+Note: Data provided by this request may change as the user change its authentication information on the iBanFirst platform. So, you should execute it every time you will execute some requests, or consecutive requests for the user.
+
+**Example:**
+```js
+TBD
+```
+
+**Returns:**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| username | String(5) | The userID given to the user by iBanFirst. |
+| pass | String | A passphrase identifying the user. |
+
+**Example:**
+```js
+{
+  "username": "im0009",
+  "pass": "TBD",
+  "civility": "M",
+  "firstName": "John",
+  "lastName": "Doe",
+  "entityName": "Rocket Company",
+  "roles": [
+    "superadmin",
+  ]
+}    
+```
+
+<hr />
+
+
+
+
+
+
